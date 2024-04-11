@@ -1,1 +1,3 @@
-# o-complex-test
+# 
+## npm i
+## npm run dev
