@@ -16,10 +16,10 @@ export const CheckoutContext = createContext(
         onAddPosition: (product_id: number) => {
         },
         isProductInCart: (product_id: number) => {
-            return false
+            return Boolean(false)
         },
         getPositionLength: (product_id: number) => {
-            return 0
+            return Number(0)
         },
         onInputPhone: (text: string) => {
 

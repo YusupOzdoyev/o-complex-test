@@ -13,12 +13,12 @@ export default function CheckoutLayout({
                                        }: PropsWithChildren<CheckoutLayoutProps>) {
     const [checkout, setCheckout] = useState<Checkout>({
         cart: []
-    } as Checkout)
+    } as unknown as Checkout)
 
     function onAddProduct(product: Product) {
         const position = {
             quantity: 1,
-            id: product.id,
+            id: product?.id,
             name: product.title,
             price: product.price
         }
@@ -79,12 +79,12 @@ export default function CheckoutLayout({
     }
 
     function isProductInCart(product_id: number) {
-        return checkout.cart?.some(product => product.id === product_id)
+        return checkout.cart?.some(product => Number(product.id) === Number(product_id))
     }
 
     function getPositionLength(product_id: number) {
         const find_position = checkout.cart.find(product => product.id === product_id);
-        return find_position ? find_position.quantity : 0;
+        return find_position ? find_position.quantity : Number(0);
     }
 
     function onInputPhone(text: string) {

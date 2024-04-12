@@ -1,5 +1,5 @@
 import React from 'react';
-import {Product} from "@/types";
+import type {Product} from "@/types";
 import product_styles from './product.module.css'
 import ProductButton from "@/components/product/product-button";
 interface ProductProps {

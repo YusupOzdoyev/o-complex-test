@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './review.module.css'
-import {Review} from '@/types';
+import type {Review} from '@/types';
 import xss from "xss";
 
 interface HeaderProps {

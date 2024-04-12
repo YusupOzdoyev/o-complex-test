@@ -5,8 +5,12 @@ import {getDataFromAPI} from "@/helpers";
 import {Reviews, Products} from "@/types";
 
 export default async function Home() {
-    const reviews: Reviews = await getDataFromAPI('/reviews');
-    const products: Products = await getDataFromAPI('/products?page=1&page_size=18');
+    const reviews: any = await getDataFromAPI('/reviews');
+    const products: any = await getDataFromAPI('/products?page=1&page_size=18');
+    if(reviews && products){
+        
+    }
+    
     return (
         <main className={styles.main}>
             <Header/>
